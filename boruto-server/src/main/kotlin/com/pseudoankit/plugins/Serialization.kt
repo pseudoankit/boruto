@@ -1,4 +1,4 @@
-package com.pseudoankit.boruto.plugins
+package com.pseudoankit.plugins
 
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*

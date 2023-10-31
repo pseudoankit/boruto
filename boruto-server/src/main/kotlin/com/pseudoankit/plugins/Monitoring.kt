@@ -1,4 +1,4 @@
-package com.pseudoankit.boruto.plugins
+package com.pseudoankit.plugins
 
 import io.ktor.server.application.*
 import io.ktor.server.plugins.callloging.*

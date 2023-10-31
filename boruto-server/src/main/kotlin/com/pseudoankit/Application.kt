@@ -1,8 +1,8 @@
-package com.pseudoankit.boruto
+package com.pseudoankit
 
-import com.pseudoankit.boruto.plugins.configureMonitoring
-import com.pseudoankit.boruto.plugins.configureRouting
-import com.pseudoankit.boruto.plugins.configureSerialization
+import com.pseudoankit.plugins.configureMonitoring
+import com.pseudoankit.plugins.configureRouting
+import com.pseudoankit.plugins.configureSerialization
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
