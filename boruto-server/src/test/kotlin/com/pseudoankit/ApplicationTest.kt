@@ -1,11 +1,12 @@
-package pseudoankit.com
+package com.pseudoankit
 
+import com.pseudoankit.boruto.plugins.configureRouting
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.server.testing.*
 import kotlin.test.*
-import pseudoankit.com.plugins.*
+import com.pseudoankit.plugins.*
 
 class ApplicationTest {
     @Test

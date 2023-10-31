@@ -1,1 +1,1 @@
-rootProject.name = "pseudoankit.com.boruto-server"
+rootProject.name = "com.pseudoankit.boruto-server"

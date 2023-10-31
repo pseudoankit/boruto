@@ -1,4 +1,4 @@
-package pseudoankit.com.plugins
+package com.pseudoankit.boruto.plugins
 
 import io.ktor.server.application.*
 import io.ktor.server.response.*
