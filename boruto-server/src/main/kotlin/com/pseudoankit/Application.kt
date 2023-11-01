@@ -1,8 +1,6 @@
 package com.pseudoankit
 
-import com.pseudoankit.plugins.configureMonitoring
-import com.pseudoankit.plugins.configureRouting
-import com.pseudoankit.plugins.configureSerialization
+import com.pseudoankit.plugins.*
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
@@ -10,7 +8,9 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-    configureMonitoring()
-    configureSerialization()
+    configureKoin()
     configureRouting()
+    configureSerialization()
+    configureMonitoring()
+    configureDefaultHeader()
 }
