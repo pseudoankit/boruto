@@ -4,15 +4,23 @@ import com.pseudoankit.model.ApiResponse
 import com.pseudoankit.model.Hero
 
 class HeroRepositoryImpl : HeroRepository {
-    override suspend fun getAllHeroes(page: Int): ApiResponse {
-        TODO()
+    override suspend fun getAllHeroes(page: Int, count: Int): ApiResponse {
+        if (page <= 0 || (page - 1).times(count) >= items.size) throw IllegalArgumentException()
+
+        return ApiResponse(
+            success = true,
+            message = "ok",
+            prevPage = if (page <= 1) null else page - 1,
+            nextPage = if (page.times(count) >= items.size) null else (page + 1).coerceAtLeast(2),
+            heroes = items.subList((page - 1).times(count), page.times(count))
+        )
     }
 
     override suspend fun searchHeroes(name: String): ApiResponse {
         TODO()
     }
 
-    val items = listOf(
+    private val items = listOf(
         Hero(
             id = 1,
             name = "Sasuke",

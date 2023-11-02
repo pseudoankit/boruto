@@ -4,6 +4,6 @@ import com.pseudoankit.model.ApiResponse
 
 interface HeroRepository {
 
-    suspend fun getAllHeroes(page: Int): ApiResponse
+    suspend fun getAllHeroes(page: Int, count: Int): ApiResponse
     suspend fun searchHeroes(name: String): ApiResponse
 }
