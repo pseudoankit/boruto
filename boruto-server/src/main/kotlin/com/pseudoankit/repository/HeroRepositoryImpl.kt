@@ -16,8 +16,16 @@ class HeroRepositoryImpl : HeroRepository {
         )
     }
 
-    override suspend fun searchHeroes(name: String): ApiResponse {
-        TODO()
+    override suspend fun searchHeroes(query: String?): ApiResponse {
+        return ApiResponse(
+            success = true,
+            message = "ok",
+            heroes = if (query.isNullOrBlank()) {
+                emptyList()
+            } else {
+                items.filter { it.name.contains(query, true) }
+            }
+        )
     }
 
     private val items = listOf(
