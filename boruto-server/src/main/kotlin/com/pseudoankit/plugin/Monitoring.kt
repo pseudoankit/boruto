@@ -1,4 +1,4 @@
-package com.pseudoankit.plugins
+package com.pseudoankit.plugin
 
 import io.ktor.server.application.*
 import io.ktor.server.plugins.callloging.*

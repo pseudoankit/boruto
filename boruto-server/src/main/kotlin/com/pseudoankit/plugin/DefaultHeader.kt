@@ -1,4 +1,4 @@
-package com.pseudoankit.plugins
+package com.pseudoankit.plugin
 
 import io.ktor.http.*
 import io.ktor.server.application.*

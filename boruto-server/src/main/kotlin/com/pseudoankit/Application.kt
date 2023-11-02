@@ -1,6 +1,6 @@
 package com.pseudoankit
 
-import com.pseudoankit.plugins.*
+import com.pseudoankit.plugin.*
 import io.ktor.server.application.*
 
 fun main(args: Array<String>) {
