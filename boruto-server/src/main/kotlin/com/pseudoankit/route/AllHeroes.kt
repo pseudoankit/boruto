@@ -25,8 +25,8 @@ fun Route.getAllHeroes() {
             )
         } catch (_: IllegalArgumentException) {
             call.respond(
-                message = ApiResponse(success = false, message = "Heroes not found"),
-                status = HttpStatusCode.BadRequest
+                message = ApiResponse(success = false, message = "Page not found."),
+                status = HttpStatusCode.NotFound
             )
         } catch (_: Exception) {
             call.respond(

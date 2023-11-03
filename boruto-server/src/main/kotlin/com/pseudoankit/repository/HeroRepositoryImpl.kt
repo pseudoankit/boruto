@@ -5,14 +5,14 @@ import com.pseudoankit.model.Hero
 
 class HeroRepositoryImpl : HeroRepository {
     override suspend fun getAllHeroes(page: Int, count: Int): ApiResponse {
-        if (page <= 0 || (page - 1).times(count) >= items.size) throw IllegalArgumentException()
+        if (page <= 0 || (page - 1).times(count) >= allHeroes.size) throw IllegalArgumentException()
 
         return ApiResponse(
             success = true,
             message = "ok",
             prevPage = if (page <= 1) null else page - 1,
-            nextPage = if (page.times(count) >= items.size) null else (page + 1).coerceAtLeast(2),
-            heroes = items.subList((page - 1).times(count), page.times(count))
+            nextPage = if (page.times(count) >= allHeroes.size) null else (page + 1).coerceAtLeast(2),
+            heroes = allHeroes.subList((page - 1).times(count), page.times(count))
         )
     }
 
@@ -23,12 +23,12 @@ class HeroRepositoryImpl : HeroRepository {
             heroes = if (query.isNullOrBlank()) {
                 emptyList()
             } else {
-                items.filter { it.name.contains(query, true) }
+                allHeroes.filter { it.name.contains(query, true) }
             }
         )
     }
 
-    private val items = listOf(
+    override val allHeroes = listOf(
         Hero(
             id = 1,
             name = "Sasuke",
