@@ -16,8 +16,10 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import com.pseudoankit.boruto.R
+import com.pseudoankit.boruto.presentation.navigation.Screen
 import com.pseudoankit.boruto.presentation.ui.theme.Purple500
 import com.pseudoankit.boruto.presentation.ui.theme.Purple700
+import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(navController: NavController) {
@@ -25,8 +27,14 @@ fun SplashScreen(navController: NavController) {
     LaunchedEffect(Unit) {
         rotationAngle.animateTo(
             targetValue = 360f,
-            animationSpec = tween(durationMillis = 1000, delayMillis = 200)
+            animationSpec = tween(durationMillis = 1000, delayMillis = 100)
         )
+        delay(1100)
+        navController.navigate(Screen.Welcome.route) {
+            popUpTo(Screen.Splash.route) {
+                inclusive = true
+            }
+        }
     }
 
     Box(

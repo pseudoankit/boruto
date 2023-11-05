@@ -64,9 +64,6 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     debugImplementation("androidx.compose.ui:ui-tooling-preview")
 
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.10.0")
-
     // Compose Navigation
     implementation("androidx.navigation:navigation-compose:2.7.5")
 
@@ -98,10 +95,6 @@ dependencies {
 
     // Coil
     implementation("io.coil-kt:coil-compose:2.4.0")
-
-    // Horizontal Pager and Indicators - Accompanist
-    implementation("com.google.accompanist:accompanist-pager:$accompanistVersion")
-    implementation("com.google.accompanist:accompanist-pager-indicators:$accompanistVersion")
 
     // Swipe to Refresh - Accompanist
     implementation("com.google.accompanist:accompanist-swiperefresh:$accompanistVersion")
