@@ -7,15 +7,19 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.pseudoankit.boruto.presentation.navigation.Screen.Companion.DETAILS_ARGUMENT_KEY
+import com.pseudoankit.boruto.presentation.screen.splash.SplashScreen
 
 @Composable
-fun NavGraph(navController: NavHostController) {
+fun NavGraph(
+    navController: NavHostController,
+    startDestination: String = Screen.Splash.route
+) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Splash.route
+        startDestination = startDestination
     ) {
         composable(route = Screen.Splash.route) {
-
+            SplashScreen(navController)
         }
         composable(route = Screen.Welcome.route) {
 
