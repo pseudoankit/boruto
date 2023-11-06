@@ -8,6 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.pseudoankit.boruto.domain.repository.DataStoreRepository
 import com.pseudoankit.boruto.presentation.navigation.Screen.Companion.DETAILS_ARGUMENT_KEY
+import com.pseudoankit.boruto.presentation.screen.home.HomeScreen
 import com.pseudoankit.boruto.presentation.screen.splash.SplashScreen
 import com.pseudoankit.boruto.presentation.screen.welcome.WelcomeScreen
 
@@ -28,7 +29,7 @@ fun NavGraph(
             WelcomeScreen(navController)
         }
         composable(route = Screen.Home.route) {
-
+            HomeScreen(navController)
         }
         composable(
             route = Screen.Details.route,

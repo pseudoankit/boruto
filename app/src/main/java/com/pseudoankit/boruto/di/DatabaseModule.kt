@@ -3,6 +3,8 @@ package com.pseudoankit.boruto.di
 import android.content.Context
 import androidx.room.Room
 import com.pseudoankit.boruto.data.local.BorutoDatabase
+import com.pseudoankit.boruto.data.local.dao.HeroDao
+import com.pseudoankit.boruto.data.local.dao.HeroRemoteKeysDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,4 +28,15 @@ object DatabaseModule {
         ).build()
     }
 
+    @Provides
+    @Singleton
+    fun provideHeroDao(database: BorutoDatabase): HeroDao {
+        return database.heroDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideHeroRemoteKeysDao(database: BorutoDatabase): HeroRemoteKeysDao {
+        return database.heroRemoteKeysDao()
+    }
 }
