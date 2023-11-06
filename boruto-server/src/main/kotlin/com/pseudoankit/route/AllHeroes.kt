@@ -15,7 +15,7 @@ fun Route.getAllHeroes() {
         try {
             val pageNo = call.request.queryParameters["page_no"]?.toInt() ?: 1
 
-            val response = repository.getAllHeroes(pageNo, 5)
+            val response = repository.getAllHeroes(pageNo, 3)
 
             call.respond(message = response, status = HttpStatusCode.OK)
         } catch (_: NumberFormatException) {
