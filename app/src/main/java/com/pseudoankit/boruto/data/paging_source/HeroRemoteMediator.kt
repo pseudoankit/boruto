@@ -1,5 +1,6 @@
 package com.pseudoankit.boruto.data.paging_source
 
+import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
@@ -81,6 +82,7 @@ class HeroRemoteMediator(
             }
             MediatorResult.Success(endOfPaginationReached = response.nextPage == null)
         } catch (e: Exception) {
+            Log.e("Boruto", e.message.orEmpty())
             return MediatorResult.Error(e)
         }
     }

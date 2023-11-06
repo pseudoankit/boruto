@@ -194,7 +194,7 @@ fun HeroItemPreview() {
             power = 100,
             month = "",
             day = "",
-            family = listOf(),
+            families = listOf(),
             abilities = listOf(),
             natureTypes = listOf()
         ),
@@ -216,7 +216,7 @@ fun HeroItemDarkPreview() {
             power = 100,
             month = "",
             day = "",
-            family = listOf(),
+            families = listOf(),
             abilities = listOf(),
             natureTypes = listOf()
         ),
