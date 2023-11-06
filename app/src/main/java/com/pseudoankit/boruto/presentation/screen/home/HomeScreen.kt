@@ -21,6 +21,7 @@ import androidx.navigation.NavController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.pseudoankit.boruto.R
 import com.pseudoankit.boruto.presentation.navigation.Screen
+import com.pseudoankit.boruto.presentation.ui.component.ListContent
 import com.pseudoankit.boruto.presentation.ui.theme.topAppBarBackgroundColor
 import com.pseudoankit.boruto.presentation.ui.theme.topAppBarContentColor
 
@@ -46,8 +47,9 @@ fun HomeScreen(
                 .fillMaxSize()
                 .padding(it)
         ) {
-            HeroesItems(
-                items = allHeroes
+            ListContent(
+                heroes = allHeroes,
+                navController = navController
             )
         }
     }
